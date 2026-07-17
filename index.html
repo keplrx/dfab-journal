@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fabrication Journey — Nash Madrid · EP1000 DFAB</title>
+<meta name="description" content="Weekly journal for EP1000 Digital Fabrication & Prototyping Fundamentals — Nash Madrid, Singapore Polytechnic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#faf5ec;
+  --ink:#191512;
+  --muted:#6f675d;
+  --accent:#f14d5a;
+  --accent2:#c81d9d;
+  --card:#ffffff;
+  --line:#e7ddcd;
+  --dark:#232323;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.65;font-size:16.5px}
+::selection{background:var(--accent);color:#fff}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(250,245,236,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .inner{max-width:1060px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+nav .logo{font-family:'Space Grotesk';font-weight:700;letter-spacing:.06em;font-size:.95rem}
+nav .logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;font-size:.85rem;font-weight:500}
+nav a:hover{color:var(--accent)}
+nav .links{display:flex;gap:18px;margin-left:auto;flex-wrap:wrap}
+
+/* hero */
+header{max-width:1060px;margin:0 auto;padding:90px 24px 70px;position:relative;overflow:hidden}
+.kicker{font-family:'Space Grotesk';letter-spacing:.28em;font-size:.78rem;color:var(--accent2);text-transform:uppercase;font-weight:500}
+h1{font-family:'Space Grotesk';font-weight:700;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.02;margin:18px 0 10px;letter-spacing:-.02em}
+h1 .circ{position:relative;display:inline-block;color:var(--accent)}
+header .sub{color:var(--muted);max-width:560px;font-size:1.05rem}
+header .meta{margin-top:34px;display:flex;gap:26px;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
+header .meta b{display:block;color:var(--ink);font-family:'Space Grotesk';font-size:.95rem}
+.scribble{font-family:'Caveat';color:var(--accent2);font-size:1.5rem;transform:rotate(-3deg);display:inline-block}
+
+/* sections */
+section{max-width:1060px;margin:0 auto;padding:64px 24px}
+.weekhead{display:flex;align-items:baseline;gap:18px;border-top:2px solid var(--ink);padding-top:22px;margin-bottom:8px;flex-wrap:wrap}
+.wk{font-family:'Space Grotesk';font-weight:700;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;background:var(--ink);color:var(--paper);padding:6px 12px;border-radius:999px}
+.wk.live{background:var(--accent)}
+h2{font-family:'Space Grotesk';font-weight:700;font-size:clamp(1.5rem,3.4vw,2.2rem);letter-spacing:-.01em}
+.date{margin-left:auto;color:var(--muted);font-size:.85rem}
+.body{max-width:720px;color:#3c362f;margin-top:14px}
+.body p+p{margin-top:12px}
+.body a{color:var(--accent2)}
+
+/* image grids */
+.grid{display:grid;gap:14px;margin-top:30px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+figure{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(25,21,18,.05)}
+figure a{display:block}
+figure img{width:100%;display:block;aspect-ratio:16/10.2;object-fit:cover;transition:transform .35s ease}
+figure:hover img{transform:scale(1.025)}
+figcaption{padding:12px 16px;font-size:.83rem;color:var(--muted)}
+figcaption b{color:var(--ink);font-weight:600;display:block;font-size:.87rem}
+.wide{grid-column:1/-1}
+.wide img{aspect-ratio:16/8.4}
+
+/* schedule */
+.sched{margin-top:30px;display:grid;gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+.srow{display:grid;grid-template-columns:130px 1fr 130px;gap:12px;padding:14px 20px;border-bottom:1px solid var(--line);font-size:.9rem;align-items:center}
+.srow:last-child{border-bottom:none}
+.srow .w{font-family:'Space Grotesk';font-weight:700;font-size:.8rem;letter-spacing:.08em;color:var(--muted)}
+.srow .s{text-align:right;font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.done .s{color:#1e8e5a}
+.pend .s{color:var(--muted)}
+.curr{background:#fff4ee}
+.curr .s{color:var(--accent)}
+.srow em{color:var(--muted);font-style:normal;font-size:.8rem;display:block}
+
+/* callouts */
+.note{margin-top:26px;background:#fff8ef;border:1px dashed #dcc9a6;border-radius:14px;padding:18px 22px;font-size:.9rem;color:#6b5b41}
+.specs{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.spec{background:var(--dark);color:#eee6d8;border-radius:14px;padding:18px 20px;font-size:.85rem}
+.spec b{font-family:'Space Grotesk';display:block;font-size:1.15rem;color:#fff;margin-bottom:4px}
+.spec span{color:#a89e8f}
+.checks{margin-top:18px;list-style:none;max-width:720px}
+.checks li{padding:10px 14px;border-bottom:1px solid var(--line);font-size:.92rem;display:flex;gap:10px;align-items:baseline}
+.checks .ok::before{content:"✓";color:#1e8e5a;font-weight:700}
+.checks .no::before{content:"✕";color:var(--accent);font-weight:700}
+.checks s{color:var(--muted)}
+.tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:#efe6d6;color:#7a6c52;border-radius:999px;padding:3px 10px;margin-right:6px}
+
+footer{border-top:2px solid var(--ink);margin-top:40px}
+footer .inner{max-width:1060px;margin:0 auto;padding:44px 24px;display:flex;gap:20px;flex-wrap:wrap;align-items:baseline;color:var(--muted);font-size:.85rem}
+footer b{font-family:'Space Grotesk';color:var(--ink)}
+@media(max-width:640px){.srow{grid-template-columns:90px 1fr 90px}}
+</style>
+</head>
+<body>
+
+<nav><div class="inner">
+  <div class="logo">FABRICATION<span> JOURNEY</span></div>
+  <div class="links">
+    <a href="#schedule">Schedule</a>
+    <a href="#week1">Wk 1</a>
+    <a href="#week34">Wk 3–4</a>
+    <a href="#week5">Wk 5</a>
+    <a href="#ca1">CA1 Project</a>
+    <a href="#ahead">Ahead</a>
+  </div>
+</div></nav>
+
+<header>
+  <div class="kicker">EP1000 · Digital Fabrication &amp; Prototyping Fundamentals</div>
+  <h1>Fabrication<br><span class="circ">Journey</span></h1>
+  <p class="sub">A weekly journal of everything I design, break, reprint and (eventually) get working in DFAB — from first sketches in Fusion 360 to a 3D-printed housing for the ESP32-C3.</p>
+  <div class="meta">
+    <div><b>Nash Madrid</b>Singapore Polytechnic</div>
+    <div><b>AY2026 · Y2 Sem 1</b>Continual Assessment Journal</div>
+    <div><b>Tools</b>Fusion 360 · Bambu Studio · FabLab T1442</div>
+  </div>
+</header>
+
+<section id="schedule" style="padding-top:10px">
+  <div class="weekhead"><span class="wk">Module Map</span><h2>The semester at a glance</h2></div>
+  <p class="body">The Brightspace schedule for EP1000, with where each journal entry fits in.</p>
+  <div class="sched">
+    <div class="srow done"><span class="w">WK 1</span><span>Introduction to Digital Fabrication<em>Module briefing, FabLab orientation</em></span><span class="s">Done</span></div>
+    <div class="srow done"><span class="w">WK 2</span><span>Holiday<em>No class</em></span><span class="s">—</span></div>
+    <div class="srow done"><span class="w">WK 3–4</span><span>3D CAD — Fusion 360<em>Sketching, constraints, extrude, revolve, parametrics</em></span><span class="s">Done</span></div>
+    <div class="srow done"><span class="w">WK 5</span><span>3D Printing<em>Slicing, tolerances, FDM printing — CA1 begins</em></span><span class="s">Done</span></div>
+    <div class="srow done"><span class="w">WK 7</span><span>Mid-Term Semester Test</span><span class="s">Done</span></div>
+    <div class="srow done"><span class="w">WK 8</span><span>2D CAD<em>Vector drawing for laser cutting</em></span><span class="s">Done</span></div>
+    <div class="srow done"><span class="w">WK 9</span><span>Laser Cutting Practical Evaluation</span><span class="s">Done</span></div>
+    <div class="srow done"><span class="w">WK 10</span><span>Vibe Coding &amp; TikTok</span><span class="s">Done</span></div>
+    <div class="srow curr"><span class="w">WK 11–12</span><span>HyperSketch AI</span><span class="s">Current</span></div>
+    <div class="srow pend"><span class="w">WK 13–15</span><span>Consultation Weeks</span><span class="s">Ahead</span></div>
+  </div>
+</section>
+
+<section id="week1">
+  <div class="weekhead"><span class="wk">Week 01</span><h2>Introduction</h2><span class="date">April 2026</span></div>
+  <div class="body">
+    <p>First week of DFAB. We got the rundown of what digital fabrication actually covers — CAD, additive manufacturing, laser cutting — plus a tour of the FabLab (T1442) and the machines we'd be trusted (and occasionally not trusted) with. The big takeaway: everything in this module is <i>design → make → test → iterate</i>, and the journal you're reading is the paper trail.</p>
+  </div>
+  <div class="note">No screenshots survived week 1 — lesson learned. Everything from week 3 onwards is documented as it happened.</div>
+</section>
+
+<section id="week34">
+  <div class="weekhead"><span class="wk">Week 03–04</span><h2>3D CAD — learning Fusion 360</h2><span class="date">8 – 15 May 2026</span></div>
+  <div class="body">
+    <p>Two weeks of getting comfortable in Fusion 360. Week 3 was all about disciplined sketching: dimensions, constraints, and construction geometry before any 3D happens. The practice sketch below is fully constrained — Ø70/Ø40 circles, a 60&nbsp;mm arc profile and a slotted rectangle, all locked down with dimensions instead of eyeballing.</p>
+    <p>From there it was sketch → extrude: a spanner with hex and pentagon cutouts, a rounded plate with through-holes, and a personalised name tag with embossed text and a keyring loop — my first "actually want to print this" moment.</p>
+  </div>
+  <div class="grid">
+    <figure><a href="wk3-sketch.jpg" target="_blank"><img src="wk3-sketch.jpg" alt="Fully dimensioned Fusion 360 sketch"></a><figcaption><b>Constrained sketching practice</b>Dimensions + constraints doing the work — sketch turns black when fully defined.</figcaption></figure>
+    <figure><a href="wk3-spanner.jpg" target="_blank"><img src="wk3-spanner.jpg" alt="Spanner exercise extruded in Fusion 360"></a><figcaption><b>Spanner exercise</b>Single sketch, one extrude, hex &amp; pentagon cutouts with filleted profile.</figcaption></figure>
+    <figure><a href="wk3-plate1.jpg" target="_blank"><img src="wk3-plate1.jpg" alt="Rounded plate with circular and rectangular cutouts"></a><figcaption><b>Plate with cutouts</b>D-profile plate — circle + slot removed via extrude-cut.</figcaption></figure>
+    <figure><a href="wk3-nametag.jpg" target="_blank"><img src="wk3-nametag.jpg" alt="Nash name tag with embossed text"></a><figcaption><b>Name tag</b>Embossed text on an offset inner face, plus a keyring loop.</figcaption></figure>
+    <figure><a href="wk4-cup1.jpg" target="_blank"><img src="wk4-cup1.jpg" alt="Cup modelled in Fusion 360 with revolve and sweep"></a><figcaption><b>Cup exercise (wk 4)</b>Revolved profile, shelled body, handle swept along a path.</figcaption></figure>
+    <figure><a href="wk4-lego1.jpg" target="_blank"><img src="wk4-lego1.jpg" alt="Lego brick modelled in Fusion 360"></a><figcaption><b>Lego 2×4 brick (wk 4)</b>Studs via rectangular pattern; hollow underside with tubes, checked against real brick dimensions.</figcaption></figure>
+    <figure><a href="wk4-lego2.jpg" target="_blank"><img src="wk4-lego2.jpg" alt="Underside of the Lego brick model"></a><figcaption><b>Brick underside</b>The bit nobody sees but Lego engineers care about most.</figcaption></figure>
+    <figure><a href="wk4-cup2.jpg" target="_blank"><img src="wk4-cup2.jpg" alt="Cup with visible sketch profiles"></a><figcaption><b>Cup — profile view</b>Sketch lines showing the revolve profile and handle path.</figcaption></figure>
+  </div>
+</section>
+
+<section id="week5">
+  <div class="weekhead"><span class="wk">Week 05</span><h2>3D Printing</h2><span class="date">late May 2026</span></div>
+  <div class="body">
+    <p>CAD models finally met the printers. We covered FDM slicing, layer heights, supports, and the thing that would come to define my CA1: <b>tolerances</b>. A model that looks perfect in Fusion means nothing if the lid doesn't close or the port cutout sits 2&nbsp;mm off. This week rolled straight into the CA1 brief — design, print and iterate a functional housing.</p>
+  </div>
+</section>
+
+<section id="ca1">
+  <div class="weekhead"><span class="wk live">CA1 Project</span><h2>Housing for the ESP32-C3</h2><span class="date">submitted 5 June 2026</span></div>
+  <div class="body">
+    <p><span class="tag">Brief</span>Design and 3D-print a housing for the ESP32-C3 microcontroller mounted on its expansion board — ports accessible, board protected, lid removable, and ideally a way to press the boot/reset buttons without opening the case.</p>
+  </div>
+
+  <div class="grid">
+    <figure class="wide"><a href="ca1-device.jpg" target="_blank"><img src="ca1-device.jpg" alt="ESP32-C3 microcontroller on expansion board next to a ruler"></a><figcaption><b>The patient</b>ESP32-C3 on its expansion board — every port, pin and button had to stay usable inside the case.</figcaption></figure>
+    <figure><a href="ca1-measure.jpg" target="_blank"><img src="ca1-measure.jpg" alt="Taking measurements of the board"></a><figcaption><b>Taking measurements</b>Calipers, ruler, and a lot of double-checking.</figcaption></figure>
+    <figure><a href="ca1-inspo.jpg" target="_blank"><img src="ca1-inspo.jpg" alt="Inspiration boards from Printables"></a><figcaption><b>Gathering inspiration</b>Based on PLAUK's ESP32-WROOM box on Printables — I borrowed the lid-locking idea and the extended button press-down nub (compliant mechanism).</figcaption></figure>
+  </div>
+
+  <div class="body" style="margin-top:34px">
+    <p><span class="tag">Measure twice</span>The board came out to <b>36 × 22 × 18&nbsp;mm</b> (L×W×H). With a +1.5&nbsp;mm tolerance the internal cavity became 37.5 × 23.5 × 19.5&nbsp;mm, with 2&nbsp;mm walls throughout.</p>
+  </div>
+  <div class="specs">
+    <div class="spec"><b>37.5 × 23.5 × 19.5</b><span>internal cavity, mm (+1.5 tolerance)</span></div>
+    <div class="spec"><b>2 mm</b><span>wall thickness · 1 mm cap inner lip</span></div>
+    <div class="spec"><b>USB-C 9 × 4</b><span>port cutout, mm (+0.5 tolerance)</span></div>
+    <div class="spec"><b>Ø3 mm button</b><span>7 mm from top · 15 mm from side walls</span></div>
+  </div>
+
+  <div class="body" style="margin-top:34px">
+    <p><span class="tag">Iterate</span>Version 1 proved the shell concept but the pin port sat too far left and the cap's inner lip was so tight it needed pliers. Version 1.2 moved the pin port right and offset the lip further. Along the way: bad tolerances, printing errors, and a snap-in clip mechanism that never quite snapped — I dropped the clip idea and kept the friction-fit lip with flexible press-down nubs for the buttons.</p>
+  </div>
+  <div class="grid">
+    <figure><a href="ca1-v1.jpg" target="_blank"><img src="ca1-v1.jpg" alt="Version 1 of the housing with lid beside it"></a><figcaption><b>Version 1</b>First print — board fits, lid... negotiable.</figcaption></figure>
+    <figure><a href="ca1-v2.jpg" target="_blank"><img src="ca1-v2.jpg" alt="Version 2 of the housing"></a><figcaption><b>Version 2</b>Pin port repositioned, cleaner cutouts, textured lid with compliant button arms.</figcaption></figure>
+    <figure class="wide"><a href="ca1-fails.jpg" target="_blank"><img src="ca1-fails.jpg" alt="Failed prints: bad tolerance, unsuccessful mechanisms, printing errors"></a><figcaption><b>The graveyard</b>Bad tolerance · unsuccessful mechanisms · printing errors. Every one of these taught the next version something.</figcaption></figure>
+  </div>
+  <ul class="checks">
+    <li class="ok">Pin port too far left → <b>moved pin port right</b> (2 Jun)</li>
+    <li class="ok">Cap inner lip fit too tight → <b>offset inner lip further</b> (4 Jun)</li>
+    <li class="no"><s>Redo clip / snap-in lip</s> — dropped in favour of friction fit</li>
+  </ul>
+
+  <div class="body" style="margin-top:34px">
+    <p><span class="tag">Final</span>The final version: friction-fit lid with two compliant press-down arms over the boot/reset buttons, USB-C and connector ports lined up first try, and a matte textured finish. Submitted with the physical prototype to FabLab T1442 and the process deck to Brightspace on 5 June.</p>
+  </div>
+  <div class="grid">
+    <figure class="wide"><a href="ca1-final.jpg" target="_blank"><img src="ca1-final.jpg" alt="Final printed housing with ports accessible"></a><figcaption><b>Final version</b>Ports aligned, buttons pressable through the lid, board fully enclosed.</figcaption></figure>
+    <figure><a href="fusion-body.jpg" target="_blank"><img src="fusion-body.jpg" alt="Fusion 360 model of the main housing body"></a><figcaption><b>CAD — main body</b>The final body in Fusion 360: port cutouts and 2 mm shell.</figcaption></figure>
+    <figure><a href="fusion-cap.jpg" target="_blank"><img src="fusion-cap.jpg" alt="Fusion 360 model of the cap with compliant button arms"></a><figcaption><b>CAD — cap</b>Lid with the two compliant arms and press nubs.</figcaption></figure>
+    <figure><a href="fusion-assembly.jpg" target="_blank"><img src="fusion-assembly.jpg" alt="Fusion 360 assembly of cap and body"></a><figcaption><b>CAD — assembly</b>Cap seated in the body — 13 sketches and a Bodies folder full of failed caps behind it.</figcaption></figure>
+    <figure class="wide"><a href="ca1-bts.jpg" target="_blank"><img src="ca1-bts.jpg" alt="Behind the scenes: Fusion 360 browser showing all bodies and sketches"></a><figcaption><b>Behind the scenes</b>The honest version: cap1, "Failed cap", Body27–34… iteration leaves a trail.</figcaption></figure>
+  </div>
+</section>
+
+<section id="ahead">
+  <div class="weekhead"><span class="wk">Week 08 +</span><h2>2D CAD, lasers &amp; what's next</h2><span class="date">June – July 2026</span></div>
+  <div class="body">
+    <p>After CA1 the module shifted to 2D: vector drawing for the laser cutter (week 8) and the laser cutting practical evaluation (week 9), followed by Vibe Coding &amp; TikTok (week 10) and HyperSketch AI (weeks 11–12, ongoing). <span class="scribble">journal entries coming soon…</span></p>
+  </div>
+  <div class="note">This section is a placeholder — photos and write-ups for weeks 8–12 will be added as I dig out the files.</div>
+</section>
+
+<footer><div class="inner">
+  <b>Nash Madrid</b>
+  <span>EP1000 · Digital Fabrication &amp; Prototyping Fundamentals · Singapore Polytechnic · AY2026 S1</span>
+  <span style="margin-left:auto">Built as part of the DFAB Continual Assessment</span>
+</div></footer>
+
+</body>
+</html>
