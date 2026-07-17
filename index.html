@@ -7,7 +7,7 @@
 <meta name="description" content="Weekly journal for EP1000 Digital Fabrication & Prototyping Fundamentals — Nash Madrid, Singapore Polytechnic.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#faf5ec;
@@ -38,10 +38,9 @@ header{max-width:1060px;margin:0 auto;padding:90px 24px 70px;position:relative;o
 .kicker{font-family:'Space Grotesk';letter-spacing:.28em;font-size:.78rem;color:var(--accent2);text-transform:uppercase;font-weight:500}
 h1{font-family:'Space Grotesk';font-weight:700;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.02;margin:18px 0 10px;letter-spacing:-.02em}
 h1 .circ{position:relative;display:inline-block;color:var(--accent)}
-header .sub{color:var(--muted);max-width:560px;font-size:1.05rem}
+header .sub{color:var(--muted);max-width:580px;font-size:1.05rem}
 header .meta{margin-top:34px;display:flex;gap:26px;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
 header .meta b{display:block;color:var(--ink);font-family:'Space Grotesk';font-size:.95rem}
-.scribble{font-family:'Caveat';color:var(--accent2);font-size:1.5rem;transform:rotate(-3deg);display:inline-block}
 
 /* sections */
 section{max-width:1060px;margin:0 auto;padding:64px 24px}
@@ -64,6 +63,7 @@ figcaption{padding:12px 16px;font-size:.83rem;color:var(--muted)}
 figcaption b{color:var(--ink);font-weight:600;display:block;font-size:.87rem}
 .wide{grid-column:1/-1}
 .wide img{aspect-ratio:16/8.4}
+.sq img{aspect-ratio:1/1}
 
 /* schedule */
 .sched{margin-top:30px;display:grid;gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
@@ -105,35 +105,36 @@ footer b{font-family:'Space Grotesk';color:var(--ink)}
     <a href="#week1">Wk 1</a>
     <a href="#week34">Wk 3–4</a>
     <a href="#week5">Wk 5</a>
-    <a href="#ca1">CA1 Project</a>
-    <a href="#ahead">Ahead</a>
+    <a href="#ca1">CA1</a>
+    <a href="#week11">Wk 11</a>
+    <a href="#now">Now</a>
   </div>
 </div></nav>
 
 <header>
   <div class="kicker">EP1000 · Digital Fabrication &amp; Prototyping Fundamentals</div>
   <h1>Fabrication<br><span class="circ">Journey</span></h1>
-  <p class="sub">A weekly journal of everything I design, break, reprint and (eventually) get working in DFAB — from first sketches in Fusion 360 to a 3D-printed housing for the ESP32-C3.</p>
+  <p class="sub">The weekly journal for my DFAB continual assessment: what got modelled, printed and cut each week, what failed, and what I changed because of it.</p>
   <div class="meta">
     <div><b>Nash Madrid</b>Singapore Polytechnic</div>
     <div><b>AY2026 · Y2 Sem 1</b>Continual Assessment Journal</div>
-    <div><b>Tools</b>Fusion 360 · Bambu Studio · FabLab T1442</div>
+    <div><b>Tools</b>Fusion 360 · Bambu Studio · Epilog Laser · FabLab T1442</div>
   </div>
 </header>
 
 <section id="schedule" style="padding-top:10px">
   <div class="weekhead"><span class="wk">Module Map</span><h2>The semester at a glance</h2></div>
-  <p class="body">The Brightspace schedule for EP1000, with where each journal entry fits in.</p>
+  <p class="body">The Brightspace schedule for EP1000, and where each entry below fits.</p>
   <div class="sched">
-    <div class="srow done"><span class="w">WK 1</span><span>Introduction to Digital Fabrication<em>Module briefing, FabLab orientation</em></span><span class="s">Done</span></div>
-    <div class="srow done"><span class="w">WK 2</span><span>Holiday<em>No class</em></span><span class="s">—</span></div>
-    <div class="srow done"><span class="w">WK 3–4</span><span>3D CAD — Fusion 360<em>Sketching, constraints, extrude, revolve, parametrics</em></span><span class="s">Done</span></div>
-    <div class="srow done"><span class="w">WK 5</span><span>3D Printing<em>Slicing, tolerances, FDM printing — CA1 begins</em></span><span class="s">Done</span></div>
+    <div class="srow done"><span class="w">WK 1</span><span>Introduction<em>Module briefing, FabLab orientation</em></span><span class="s">Done</span></div>
+    <div class="srow done"><span class="w">WK 2</span><span>Holiday</span><span class="s">—</span></div>
+    <div class="srow done"><span class="w">WK 3–4</span><span>3D CAD — Fusion 360<em>Sketching &amp; constraints, extrude, revolve, shell, sweep, patterns</em></span><span class="s">Done</span></div>
+    <div class="srow done"><span class="w">WK 5</span><span>3D Printing<em>Slicing, tolerances — CA1 briefed</em></span><span class="s">Done</span></div>
     <div class="srow done"><span class="w">WK 7</span><span>Mid-Term Semester Test</span><span class="s">Done</span></div>
-    <div class="srow done"><span class="w">WK 8</span><span>2D CAD<em>Vector drawing for laser cutting</em></span><span class="s">Done</span></div>
+    <div class="srow done"><span class="w">WK 8</span><span>2D CAD<em>Vector drawing for the laser cutter</em></span><span class="s">Done</span></div>
     <div class="srow done"><span class="w">WK 9</span><span>Laser Cutting Practical Evaluation</span><span class="s">Done</span></div>
     <div class="srow done"><span class="w">WK 10</span><span>Vibe Coding &amp; TikTok</span><span class="s">Done</span></div>
-    <div class="srow curr"><span class="w">WK 11–12</span><span>HyperSketch AI</span><span class="s">Current</span></div>
+    <div class="srow curr"><span class="w">WK 11–12</span><span>HyperSketch AI<em>Laser badge earned wk 11 · currently in wk 12</em></span><span class="s">Current</span></div>
     <div class="srow pend"><span class="w">WK 13–15</span><span>Consultation Weeks</span><span class="s">Ahead</span></div>
   </div>
 </section>
@@ -141,90 +142,106 @@ footer b{font-family:'Space Grotesk';color:var(--ink)}
 <section id="week1">
   <div class="weekhead"><span class="wk">Week 01</span><h2>Introduction</h2><span class="date">April 2026</span></div>
   <div class="body">
-    <p>First week of DFAB. We got the rundown of what digital fabrication actually covers — CAD, additive manufacturing, laser cutting — plus a tour of the FabLab (T1442) and the machines we'd be trusted (and occasionally not trusted) with. The big takeaway: everything in this module is <i>design → make → test → iterate</i>, and the journal you're reading is the paper trail.</p>
+    <p>Mostly orientation: what the module covers (CAD, 3D printing, laser cutting), how the three CAs are weighted, and a walk through FabLab at T1442 to see the machines we'd be working with. I didn't screenshot anything this week — it hadn't sunk in yet that the journal would need evidence. From week 3 onwards I saved things as I went.</p>
   </div>
-  <div class="note">No screenshots survived week 1 — lesson learned. Everything from week 3 onwards is documented as it happened.</div>
 </section>
 
 <section id="week34">
   <div class="weekhead"><span class="wk">Week 03–04</span><h2>3D CAD — learning Fusion 360</h2><span class="date">8 – 15 May 2026</span></div>
   <div class="body">
-    <p>Two weeks of getting comfortable in Fusion 360. Week 3 was all about disciplined sketching: dimensions, constraints, and construction geometry before any 3D happens. The practice sketch below is fully constrained — Ø70/Ø40 circles, a 60&nbsp;mm arc profile and a slotted rectangle, all locked down with dimensions instead of eyeballing.</p>
-    <p>From there it was sketch → extrude: a spanner with hex and pentagon cutouts, a rounded plate with through-holes, and a personalised name tag with embossed text and a keyring loop — my first "actually want to print this" moment.</p>
+    <p>Week 3 started with sketching, and the main adjustment was learning not to draw like it's Illustrator. In Fusion you rough the geometry out, then let dimensions and constraints pull it into its final shape — the sketch turns black once it's fully defined and nothing can move anymore. The practice sketch below took longer than I'd like to admit for two circles, an arc and a slot.</p>
+    <p>Then extrudes: a spanner from a single profile, a plate with a circle and slot cut through it, and a name tag with embossed text that I still mean to print. Week 4 moved on to revolve, shell and sweep through the cup exercise, and closed with a 2×4 Lego brick — studs done with a rectangular pattern, underside hollowed out with the centre tubes that make real bricks grip.</p>
   </div>
   <div class="grid">
-    <figure><a href="wk3-sketch.jpg" target="_blank"><img src="wk3-sketch.jpg" alt="Fully dimensioned Fusion 360 sketch"></a><figcaption><b>Constrained sketching practice</b>Dimensions + constraints doing the work — sketch turns black when fully defined.</figcaption></figure>
-    <figure><a href="wk3-spanner.jpg" target="_blank"><img src="wk3-spanner.jpg" alt="Spanner exercise extruded in Fusion 360"></a><figcaption><b>Spanner exercise</b>Single sketch, one extrude, hex &amp; pentagon cutouts with filleted profile.</figcaption></figure>
-    <figure><a href="wk3-plate1.jpg" target="_blank"><img src="wk3-plate1.jpg" alt="Rounded plate with circular and rectangular cutouts"></a><figcaption><b>Plate with cutouts</b>D-profile plate — circle + slot removed via extrude-cut.</figcaption></figure>
-    <figure><a href="wk3-nametag.jpg" target="_blank"><img src="wk3-nametag.jpg" alt="Nash name tag with embossed text"></a><figcaption><b>Name tag</b>Embossed text on an offset inner face, plus a keyring loop.</figcaption></figure>
-    <figure><a href="wk4-cup1.jpg" target="_blank"><img src="wk4-cup1.jpg" alt="Cup modelled in Fusion 360 with revolve and sweep"></a><figcaption><b>Cup exercise (wk 4)</b>Revolved profile, shelled body, handle swept along a path.</figcaption></figure>
-    <figure><a href="wk4-lego1.jpg" target="_blank"><img src="wk4-lego1.jpg" alt="Lego brick modelled in Fusion 360"></a><figcaption><b>Lego 2×4 brick (wk 4)</b>Studs via rectangular pattern; hollow underside with tubes, checked against real brick dimensions.</figcaption></figure>
-    <figure><a href="wk4-lego2.jpg" target="_blank"><img src="wk4-lego2.jpg" alt="Underside of the Lego brick model"></a><figcaption><b>Brick underside</b>The bit nobody sees but Lego engineers care about most.</figcaption></figure>
-    <figure><a href="wk4-cup2.jpg" target="_blank"><img src="wk4-cup2.jpg" alt="Cup with visible sketch profiles"></a><figcaption><b>Cup — profile view</b>Sketch lines showing the revolve profile and handle path.</figcaption></figure>
+    <figure><a href="wk3-sketch.jpg" target="_blank"><img src="wk3-sketch.jpg" alt="Fully dimensioned Fusion 360 sketch"></a><figcaption><b>Practice sketch, fully constrained</b>Ø70/Ø40 circles, 60 mm arc, one slot. Black lines mean it's locked.</figcaption></figure>
+    <figure><a href="wk3-spanner.jpg" target="_blank"><img src="wk3-spanner.jpg" alt="Spanner exercise extruded in Fusion 360"></a><figcaption><b>Spanner exercise</b>One profile, one extrude, fillets after.</figcaption></figure>
+    <figure><a href="wk3-plate1.jpg" target="_blank"><img src="wk3-plate1.jpg" alt="Rounded plate with circular and rectangular cutouts"></a><figcaption><b>Plate exercise</b>Circle and slot cut through a D-shaped profile.</figcaption></figure>
+    <figure><a href="wk3-nametag.jpg" target="_blank"><img src="wk3-nametag.jpg" alt="Nash name tag with embossed text"></a><figcaption><b>Name tag</b>Embossed text on the top face, hole for a keyring.</figcaption></figure>
+    <figure><a href="wk4-cup1.jpg" target="_blank"><img src="wk4-cup1.jpg" alt="Cup modelled in Fusion 360 with revolve and sweep"></a><figcaption><b>Cup exercise (wk 4)</b>Revolve for the body, shell to hollow it, sweep for the handle.</figcaption></figure>
+    <figure><a href="wk4-lego1.jpg" target="_blank"><img src="wk4-lego1.jpg" alt="Lego brick modelled in Fusion 360"></a><figcaption><b>Lego 2×4 brick (wk 4)</b>Studs via rectangular pattern, dimensions taken off a real brick.</figcaption></figure>
+    <figure><a href="wk4-lego2.jpg" target="_blank"><img src="wk4-lego2.jpg" alt="Underside of the Lego brick model"></a><figcaption><b>Brick underside</b>Centre tubes sized so the studs of the brick below have something to clamp.</figcaption></figure>
+    <figure><a href="wk4-cup2.jpg" target="_blank"><img src="wk4-cup2.jpg" alt="Cup with visible sketch profiles"></a><figcaption><b>Cup, profile view</b>Same cup with the revolve profile and handle path showing.</figcaption></figure>
   </div>
 </section>
 
 <section id="week5">
   <div class="weekhead"><span class="wk">Week 05</span><h2>3D Printing</h2><span class="date">late May 2026</span></div>
   <div class="body">
-    <p>CAD models finally met the printers. We covered FDM slicing, layer heights, supports, and the thing that would come to define my CA1: <b>tolerances</b>. A model that looks perfect in Fusion means nothing if the lid doesn't close or the port cutout sits 2&nbsp;mm off. This week rolled straight into the CA1 brief — design, print and iterate a functional housing.</p>
+    <p>The models met the printers. Slicing in Bambu Studio, layer heights, when supports are worth the cleanup — and the thing that ended up mattering most for CA1: clearance. A hole modelled at 3 mm does not come out of an FDM printer at 3 mm. CA1 was briefed the same week: design, print and iterate a housing for the ESP32-C3, physical prototype and process deck due 5 June.</p>
   </div>
 </section>
 
 <section id="ca1">
   <div class="weekhead"><span class="wk live">CA1 Project</span><h2>Housing for the ESP32-C3</h2><span class="date">submitted 5 June 2026</span></div>
   <div class="body">
-    <p><span class="tag">Brief</span>Design and 3D-print a housing for the ESP32-C3 microcontroller mounted on its expansion board — ports accessible, board protected, lid removable, and ideally a way to press the boot/reset buttons without opening the case.</p>
+    <p><span class="tag">Brief</span>A 3D-printed housing for the ESP32-C3 on its expansion board. The board has to sit securely, both ports have to line up with their cutouts, and the lid needs to come off for access. On top of the brief I wanted the boot/reset buttons pressable without opening the case.</p>
   </div>
 
   <div class="grid">
-    <figure class="wide"><a href="ca1-device.jpg" target="_blank"><img src="ca1-device.jpg" alt="ESP32-C3 microcontroller on expansion board next to a ruler"></a><figcaption><b>The patient</b>ESP32-C3 on its expansion board — every port, pin and button had to stay usable inside the case.</figcaption></figure>
-    <figure><a href="ca1-measure.jpg" target="_blank"><img src="ca1-measure.jpg" alt="Taking measurements of the board"></a><figcaption><b>Taking measurements</b>Calipers, ruler, and a lot of double-checking.</figcaption></figure>
-    <figure><a href="ca1-inspo.jpg" target="_blank"><img src="ca1-inspo.jpg" alt="Inspiration boards from Printables"></a><figcaption><b>Gathering inspiration</b>Based on PLAUK's ESP32-WROOM box on Printables — I borrowed the lid-locking idea and the extended button press-down nub (compliant mechanism).</figcaption></figure>
+    <figure class="wide"><a href="ca1-device.jpg" target="_blank"><img src="ca1-device.jpg" alt="ESP32-C3 microcontroller on expansion board next to a ruler"></a><figcaption><b>The board</b>ESP32-C3 on its expansion board — 36 × 22 × 18 mm with the headers on.</figcaption></figure>
+    <figure><a href="ca1-measure.jpg" target="_blank"><img src="ca1-measure.jpg" alt="Taking measurements of the board"></a><figcaption><b>Measuring up</b>Port positions and clearances. Everything downstream depends on these numbers being right.</figcaption></figure>
+    <figure><a href="ca1-inspo.jpg" target="_blank"><img src="ca1-inspo.jpg" alt="Inspiration boards from Printables"></a><figcaption><b>Reference</b>PLAUK's ESP32-WROOM box on Printables. I took two ideas from it: the lid lock and the nub that presses a button through the case.</figcaption></figure>
   </div>
 
   <div class="body" style="margin-top:34px">
-    <p><span class="tag">Measure twice</span>The board came out to <b>36 × 22 × 18&nbsp;mm</b> (L×W×H). With a +1.5&nbsp;mm tolerance the internal cavity became 37.5 × 23.5 × 19.5&nbsp;mm, with 2&nbsp;mm walls throughout.</p>
+    <p><span class="tag">Numbers</span>The board measured 36 × 22 × 18 mm. I gave the cavity +1.5 mm all round and kept 2 mm walls; port cutouts got +0.5 mm, which turned out to be optimistic on the first print.</p>
   </div>
   <div class="specs">
     <div class="spec"><b>37.5 × 23.5 × 19.5</b><span>internal cavity, mm (+1.5 tolerance)</span></div>
     <div class="spec"><b>2 mm</b><span>wall thickness · 1 mm cap inner lip</span></div>
     <div class="spec"><b>USB-C 9 × 4</b><span>port cutout, mm (+0.5 tolerance)</span></div>
-    <div class="spec"><b>Ø3 mm button</b><span>7 mm from top · 15 mm from side walls</span></div>
+    <div class="spec"><b>Ø3 mm button</b><span>7 mm from the top · 15 mm from either side wall</span></div>
   </div>
 
   <div class="body" style="margin-top:34px">
-    <p><span class="tag">Iterate</span>Version 1 proved the shell concept but the pin port sat too far left and the cap's inner lip was so tight it needed pliers. Version 1.2 moved the pin port right and offset the lip further. Along the way: bad tolerances, printing errors, and a snap-in clip mechanism that never quite snapped — I dropped the clip idea and kept the friction-fit lip with flexible press-down nubs for the buttons.</p>
+    <p><span class="tag">Iterations</span>Version 1 proved the shell worked and not much else. The pin port sat too far left, and the cap's inner lip was so tight I got it off with pliers. Version 1.2 moved the port right and offset the lip. I also spent a while on a snap-in clip lid — watched a reference video, printed it twice — and dropped it. The thin arms either snapped or fused during printing, and the friction fit was already holding fine.</p>
   </div>
   <div class="grid">
-    <figure><a href="ca1-v1.jpg" target="_blank"><img src="ca1-v1.jpg" alt="Version 1 of the housing with lid beside it"></a><figcaption><b>Version 1</b>First print — board fits, lid... negotiable.</figcaption></figure>
-    <figure><a href="ca1-v2.jpg" target="_blank"><img src="ca1-v2.jpg" alt="Version 2 of the housing"></a><figcaption><b>Version 2</b>Pin port repositioned, cleaner cutouts, textured lid with compliant button arms.</figcaption></figure>
-    <figure class="wide"><a href="ca1-fails.jpg" target="_blank"><img src="ca1-fails.jpg" alt="Failed prints: bad tolerance, unsuccessful mechanisms, printing errors"></a><figcaption><b>The graveyard</b>Bad tolerance · unsuccessful mechanisms · printing errors. Every one of these taught the next version something.</figcaption></figure>
+    <figure><a href="ca1-v1.jpg" target="_blank"><img src="ca1-v1.jpg" alt="Version 1 of the housing with lid beside it"></a><figcaption><b>Version 1</b>The board fit. The lid needed pliers.</figcaption></figure>
+    <figure><a href="ca1-v2.jpg" target="_blank"><img src="ca1-v2.jpg" alt="Version 2 of the housing"></a><figcaption><b>Version 1.2</b>Pin port moved right, looser lip, textured lid with the compliant button arms.</figcaption></figure>
+    <figure class="wide"><a href="ca1-fails.jpg" target="_blank"><img src="ca1-fails.jpg" alt="Failed prints: bad tolerance, unsuccessful mechanisms, printing errors"></a><figcaption><b>What didn't make it</b>Bad tolerances, the abandoned clip mechanism, and straight-up printing errors.</figcaption></figure>
   </div>
   <ul class="checks">
-    <li class="ok">Pin port too far left → <b>moved pin port right</b> (2 Jun)</li>
-    <li class="ok">Cap inner lip fit too tight → <b>offset inner lip further</b> (4 Jun)</li>
-    <li class="no"><s>Redo clip / snap-in lip</s> — dropped in favour of friction fit</li>
+    <li class="ok">Pin port too far left → moved right (2 Jun)</li>
+    <li class="ok">Cap inner lip too tight → offset further (4 Jun)</li>
+    <li class="no"><s>Redo clip / snap-in lip</s> — dropped, friction fit kept</li>
   </ul>
 
   <div class="body" style="margin-top:34px">
-    <p><span class="tag">Final</span>The final version: friction-fit lid with two compliant press-down arms over the boot/reset buttons, USB-C and connector ports lined up first try, and a matte textured finish. Submitted with the physical prototype to FabLab T1442 and the process deck to Brightspace on 5 June.</p>
+    <p><span class="tag">Final</span>The submitted version has a friction-fit lid with two compliant arms that press the boot and reset buttons through the top, both ports lined up, and a matte textured finish. Prototype went into the CA1 box at FabLab T1442, deck went to Brightspace, both on 5 June.</p>
   </div>
   <div class="grid">
-    <figure class="wide"><a href="ca1-final.jpg" target="_blank"><img src="ca1-final.jpg" alt="Final printed housing with ports accessible"></a><figcaption><b>Final version</b>Ports aligned, buttons pressable through the lid, board fully enclosed.</figcaption></figure>
-    <figure><a href="fusion-body.jpg" target="_blank"><img src="fusion-body.jpg" alt="Fusion 360 model of the main housing body"></a><figcaption><b>CAD — main body</b>The final body in Fusion 360: port cutouts and 2 mm shell.</figcaption></figure>
-    <figure><a href="fusion-cap.jpg" target="_blank"><img src="fusion-cap.jpg" alt="Fusion 360 model of the cap with compliant button arms"></a><figcaption><b>CAD — cap</b>Lid with the two compliant arms and press nubs.</figcaption></figure>
-    <figure><a href="fusion-assembly.jpg" target="_blank"><img src="fusion-assembly.jpg" alt="Fusion 360 assembly of cap and body"></a><figcaption><b>CAD — assembly</b>Cap seated in the body — 13 sketches and a Bodies folder full of failed caps behind it.</figcaption></figure>
-    <figure class="wide"><a href="ca1-bts.jpg" target="_blank"><img src="ca1-bts.jpg" alt="Behind the scenes: Fusion 360 browser showing all bodies and sketches"></a><figcaption><b>Behind the scenes</b>The honest version: cap1, "Failed cap", Body27–34… iteration leaves a trail.</figcaption></figure>
+    <figure class="wide"><a href="ca1-final.jpg" target="_blank"><img src="ca1-final.jpg" alt="Final printed housing with ports accessible"></a><figcaption><b>Final version</b>Both ports clear, buttons pressable through the lid.</figcaption></figure>
+    <figure><a href="fusion-body.jpg" target="_blank"><img src="fusion-body.jpg" alt="Fusion 360 model of the main housing body"></a><figcaption><b>CAD — main body</b>2 mm shell with the port cutouts.</figcaption></figure>
+    <figure><a href="fusion-cap.jpg" target="_blank"><img src="fusion-cap.jpg" alt="Fusion 360 model of the cap with compliant button arms"></a><figcaption><b>CAD — cap</b>The two compliant arms with their press nubs.</figcaption></figure>
+    <figure><a href="fusion-assembly.jpg" target="_blank"><img src="fusion-assembly.jpg" alt="Fusion 360 assembly of cap and body"></a><figcaption><b>CAD — assembly</b>Cap seated in the body.</figcaption></figure>
+    <figure class="wide"><a href="ca1-bts.jpg" target="_blank"><img src="ca1-bts.jpg" alt="Behind the scenes: Fusion 360 browser showing all bodies and sketches"></a><figcaption><b>Behind the scenes</b>The browser panel doesn't lie: a body literally named "Failed cap", and Body27 through Body34 behind the two that shipped.</figcaption></figure>
   </div>
 </section>
 
-<section id="ahead">
-  <div class="weekhead"><span class="wk">Week 08 +</span><h2>2D CAD, lasers &amp; what's next</h2><span class="date">June – July 2026</span></div>
+<section id="week11">
+  <div class="weekhead"><span class="wk">Week 11</span><h2>Laser cutting — certified</h2><span class="date">10 July 2026</span></div>
   <div class="body">
-    <p>After CA1 the module shifted to 2D: vector drawing for the laser cutter (week 8) and the laser cutting practical evaluation (week 9), followed by Vibe Coding &amp; TikTok (week 10) and HyperSketch AI (weeks 11–12, ongoing). <span class="scribble">journal entries coming soon…</span></p>
+    <p>The FabLab laser course: three hours on machine safety, which materials are allowed in the machine (and which absolutely aren't), power and speed settings, and focusing before a job. Certification needed two things — a self-evaluation quiz with a score above 80%, and a face-to-face evaluation on the machine itself.</p>
+    <p>The evaluation piece doubles as the trophy: a pentagon tag in red acrylic, cut on the Epilog, with my name and the completion date engraved. Raster pass first for the engraving, then the vector pass cuts the outline and keyring hole. The badge was issued the same morning and means I can now book the laser cutter in FabLab on my own.</p>
   </div>
-  <div class="note">This section is a placeholder — photos and write-ups for weeks 8–12 will be added as I dig out the files.</div>
+  <div class="specs">
+    <div class="spec"><b>3 hours</b><span>FABLAB@SP laser cutter course</span></div>
+    <div class="spec"><b>&gt;80% + F2F</b><span>self-evaluation quiz and hands-on evaluation</span></div>
+    <div class="spec"><b>10 Jul 2026</b><span>badge issued · expiry: never</span></div>
+  </div>
+  <div class="grid">
+    <figure class="wide"><a href="wk11-lasercut.jpg" target="_blank"><img src="wk11-lasercut.jpg" alt="Pentagon tag on the laser cutter bed right after cutting"></a><figcaption><b>On the Epilog bed</b>Straight after the cut — engraving done, outline and hole cut free of the sheet.</figcaption></figure>
+    <figure class="sq"><a href="wk11-badge.jpg" target="_blank"><img src="wk11-badge.jpg" alt="Red acrylic pentagon tag engraved with Nash and 10 Jul 2026"></a><figcaption><b>The tag</b>Red acrylic, engraved and dated: 10 Jul 2026.</figcaption></figure>
+  </div>
+</section>
+
+<section id="now">
+  <div class="weekhead"><span class="wk live">Week 12</span><h2>Currently</h2><span class="date">July 2026</span></div>
+  <div class="body">
+    <p>Week 12 is HyperSketch AI, following week 10's Vibe Coding &amp; TikTok and week 8's 2D CAD work that fed into the laser evaluation. Consultation weeks for CA3 start week 13.</p>
+  </div>
+  <div class="note">Weeks 8, 10 and 12 still need their write-ups — I'll add those entries once I dig the files out.</div>
 </section>
 
 <footer><div class="inner">
