@@ -64,6 +64,7 @@ figcaption b{color:var(--ink);font-weight:600;display:block;font-size:.87rem}
 .wide{grid-column:1/-1}
 .wide img{aspect-ratio:16/8.4}
 .sq img{aspect-ratio:1/1}
+figure video{width:100%;display:block;background:#111}
 
 /* schedule */
 .sched{margin-top:30px;display:grid;gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
@@ -232,7 +233,10 @@ footer b{font-family:'Space Grotesk';color:var(--ink)}
   </div>
   <div class="grid">
     <figure class="wide"><a href="wk11-lasercut.jpg" target="_blank"><img src="wk11-lasercut.jpg" alt="Pentagon tag on the laser cutter bed right after cutting"></a><figcaption><b>On the Epilog bed</b>Straight after the cut — engraving done, outline and hole cut free of the sheet.</figcaption></figure>
-    <figure class="sq"><a href="wk11-badge.jpg" target="_blank"><img src="wk11-badge.jpg" alt="Red acrylic pentagon tag engraved with Nash and 10 Jul 2026"></a><figcaption><b>The tag</b>Red acrylic, engraved and dated: 10 Jul 2026.</figcaption></figure>
+    <figure><video src="wk11-vid-engrave.mp4" controls muted playsinline preload="metadata"></video><figcaption><b>Raster pass</b>The head working through the engraving, shot through the lid.</figcaption></figure>
+    <figure><video src="wk11-vid-cut.mp4" controls muted playsinline preload="metadata"></video><figcaption><b>Vector pass</b>Outline and keyring hole. The red glow is the acrylic edge lighting up as it cuts.</figcaption></figure>
+    <figure><video src="wk11-vid-tag.mp4" autoplay loop muted playsinline></video><figcaption><b>The tag</b>Red acrylic, engraved and dated: 10 Jul 2026.</figcaption></figure>
+    <figure class="sq"><a href="wk11-badge.jpg" target="_blank"><img src="wk11-badge.jpg" alt="Red acrylic pentagon tag engraved with Nash and 10 Jul 2026"></a><figcaption><b>Up close</b>The finished piece in daylight.</figcaption></figure>
   </div>
 </section>
 
